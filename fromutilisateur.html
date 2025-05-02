@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIGEST - Formulaire d'inscription utilisateur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .checkbox {
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        .hint {
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">AVIGEST</div>
+    <h1>Formulaire d'inscription utilisateur</h1>
+
+    <form action="fromutilisateur.php" method="post">
+        <div class="form-group">
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" name="nom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="prenom">Prénom *</label>
+            <input type="text" id="prenom" name="prenom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telephone">Téléphone *</label>
+            <input type="tel" id="telephone" name="telephone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mot de passe *</label>
+            <input type="password" id="password" name="password" required>
+            <div class="hint">Le mot de passe doit contenir au moins 8 caractères, incluant majuscules, minuscules et chiffres.</div>
+        </div>
+
+        <div class="form-group">
+            <label for="role">Rôle *</label>
+            <select id="role" name="role" required>
+            <option value="Administrateur">Administrateur</option>
+            <option value="Utilisateur">Utilisateur</option>
+            <option value="Invité">Invité</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Date de création *</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" id="active" name="active" checked>
+            <label for="active">Compte actif</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Enregistrer</button>
+    </form>
+
+    <div class="footer">@AVIGEST 2025 - Tous droits réservés</div>
+</body>
+</html>
